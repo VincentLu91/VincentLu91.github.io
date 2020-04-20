@@ -64,7 +64,7 @@ Instagram captions require up to 30 hashtags in order to post. What I found from
 
 ## Plans for future
 
-Until GANs continue to advance and evolve, the capabilities are not fully available to completely fulfill the Instagram content use cases as desired. However, I plan to improve on this project when there is potential to experiment with new GANs that make up for the shortcomings as described above, while accessing hardware to reproduce results from GAN research papers.
+Until GANs continue to advance and evolve, the capabilities are not fully available to easily generate polished Instagram posts. However, I plan to improve on this project when there is potential to experiment with new GANs that make up for the shortcomings that I have encountered, while accessing hardware to reproduce results from GAN research papers.
 
 On the text generation side, I feel that limiting the number of hashtags is also important, while enforcing constraints on the GPT-2 by preventing/removing duplicate hashtags in resultant text. As well, I plan to take the opportunity to experiment with image-to-text language models while preserving the style of the captions from existing Instagram Posts whenever the possibility arises.
 
@@ -74,8 +74,8 @@ The project is currently available in the form of a data app, but from the produ
 
 ## Conclusion
 
-While version 0.1 is far from the expected quality, the IG Content Generator demonstrates the ability to generate social media content on command. Given that GANs and language models have emerged in recent years, I am not surprised if working with them to solve the content marketing problem will be like grabbing a tiger by the tail. 
+While version 0.1 is far from the expected quality, the IG Content Generator demonstrates the ability to generate social media content on demand. Given that GANs and language models have emerged in recent years, I am not surprised if working with them to solve the content marketing problem will be like grabbing a tiger by the tail. 
 
-GANs are extremely difficult to train, and text generation approaches have a long way to go. But when implemented as intended, the Generator will has enormous potential to help business owners and bootstrapped startups to efficiently content on demand.
+GANs are extremely difficult to train, and text generation approaches have a long way to go. But when implemented with new capabilities as they come, the Generator will has enormous potential to help business owners and bootstrapped startups to efficiently automate their content strategies.
 
 One more thing to note, this is not intended to replace filmographers or photographers. This is intended to help businesses free up resources by having the Generator to "think up" content based on its training on existing Instagram posts. Moreover, there is always potential for visual and text discrepancies in AI-generated content.
