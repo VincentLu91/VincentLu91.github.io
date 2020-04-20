@@ -20,7 +20,7 @@ I have come to realize this years ago when trying out different types of busines
 
 Think of this is the Content Generator v0.1.
 
-Having spent two months building it, this is my attempt to build an AI powered Instagram Content Generator.
+Having spent two months building it, this is my attempt to build an AI powered IG Content Generator.
 
 I built this project with one goal in mind: to enable businesses - bootstrapped startups or solo companies alike - to efficiently automate content creation while allocating the rest of their resources on value-producing, cashflow-generating activities.
 
@@ -28,7 +28,7 @@ I built this project with one goal in mind: to enable businesses - bootstrapped 
 
 The IG Content Generator is composed of two essential components, a pre-trained Generative Adversarial Network (GAN) for generating visual content, and a pre-trained GPT-2 network for generating caption content.
 
-The GAN used is an existing Keras implementation of a pre-trained Progressive Growing GAN (PGGAN). The PGGAN works by starting with convolutional layers that process 4x4 images. Later on, the PGGAN incrementally adds in new layers with images of increasing resolution, effectively "fading in" images for learning details in visual structures. This is the "progressive" aspect of building a GAN to generate high resolution, photorealistic images.
+The GAN used is an existing Keras implementation of a pre-trained Progressive Growing GAN (PGGAN). The PGGAN works by starting with convolutional layers that process 4x4 images. Later in the training, the PGGAN incrementally adds in new layers with images of increasing resolution, effectively "fading in" images for learning finer details in visual structures. This is the "progressive" aspect of building a GAN to generate high resolution, photorealistic images.
 
 The GPT-2 model used is a smaller model with 124M parameters but is resource efficient. It is capable of generating near-coherent text by way of natural language modelling.
 
@@ -44,7 +44,7 @@ With both models trained, I wrote a small data app to show the auto generation o
 
 You will find the demonstration of it here: https://youtu.be/OAgeJVUTXyw
 
-## Some Limitations
+## Limitations
 
 Generative Adversarial Networks have only emerged in the mid-2010s, and it wasn't until 2017 that we have started to see state-of-the-art results. Up to this time, it is still incredibly difficult to replicate such results as those whose networks are created by the researchers behind them.
 
@@ -64,7 +64,7 @@ Instagram captions require up to 30 hashtags in order to post. What I found from
 
 ## Plans for future
 
-Until GANs continue to advance and evolve, there is not much certainty. However, I plan to improve on this project when there is potential to experiment with new GANs that make up for the shortcomings as described above, while accessing hardware to reproduce results from GAN research papers.
+Until GANs continue to advance and evolve, the capabilities are not fully available to completely fulfill the Instagram content use cases as desired. However, I plan to improve on this project when there is potential to experiment with new GANs that make up for the shortcomings as described above, while accessing hardware to reproduce results from GAN research papers.
 
 On the text generation side, I feel that limiting the number of hashtags is also important, while enforcing constraints on the GPT-2 by preventing/removing duplicate hashtags in resultant text. As well, I plan to take the opportunity to experiment with image-to-text language models while preserving the style of the captions from existing Instagram Posts whenever the possibility arises.
 
