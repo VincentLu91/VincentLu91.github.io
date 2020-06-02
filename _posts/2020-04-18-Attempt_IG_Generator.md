@@ -20,7 +20,7 @@ Think of this is the Content Generator v0.1.
 
 I have come to realize this problem years ago when trying out online businesses, so I decided to create a proof of concept AI data app to help brands increase content marketing productivity on Instagram.
 
-The data app is built with the goal of enabling businesses to grow their audiences online by auto-generate Instagram content at scale.
+The data app is built with the goal of enabling businesses to grow their audiences online by auto-generating Instagram content at scale.
 
 ## The Architecture of the Instagram Content Generator
 
