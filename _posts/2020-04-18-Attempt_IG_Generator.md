@@ -32,7 +32,7 @@ The GPT-2 model used is a smaller model with 124M parameters but is resource eff
 
 To prepare for training both models, I scraped over 20,000 Instagram posts and limited the feasibility study to tree posts, using the hashtag #treesofinstagram.
 
-I took the images and resized them to 1024x1024 resolution to prepare them for training (the GAN is limited to training on images of a handcoded size). I then zipped these images into an hdf5 file (the GAN does use Tensorflow in one of the codebases, but the implementation is mainly Keras) so the GAN could begin training on it. The GAN was trained for 10000 epochs, with model snapshots saved every 10 epochs. 
+I took the images and resized them to 1024x1024 resolution to prepare them for training (the GAN is limited to training on images of a handcoded size). I then zipped them into an hdf5 file (the GAN does use Tensorflow in one of the codebases, but the implementation is mainly Keras) so the GAN could begin training on it. The GAN was trained for 10000 epochs, with model snapshots saved every 10 epochs. 
 
 I used a cloud platform to train the GAN with the dataset using a Tesla V100. The process took 1 day and 14 hours to completely train with a final model outputted at the end. As part of the experiment, I trained both with and without pre-trained weights that were previously trained on the celebA HD dataset, and the quality of the outputs turned out to be roughly the same.
 
