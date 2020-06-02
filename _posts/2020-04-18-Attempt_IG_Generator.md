@@ -1,6 +1,6 @@
 # Project: My Attempt to create an Instagram Content Generator
 
-During February and March, I set out to build out a project to solve a problem. To say the least, the problem has remained unsolved for years, and I feel that my first stab at it would pave the way to enable commercial creativity for businesses of all shapes and sizes regardless of budget and time spent in marketing.
+During February and March, I set out to build out a project to solve a problem. To say the least, the problem has remained unsolved for years, and I feel that my first stab at it would pave the way to enable commercial creativity for businesses of all shapes and sizes, no matter the budget and time spent in marketing.
 
 Allow me to describe the background context behind the project...
 
