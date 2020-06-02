@@ -6,7 +6,7 @@ Allow me to describe the background context behind the project...
 
 ## Problem Domain: Content Marketing
 
-Content marketing has evolved over the past 20 years through new forms and media. The first known medium is a blog, then came video content. However, new media have sprung up and become commonplace as well, including social media and podcasting. All forms of content are now freely available to businesses to build audiences. 
+Content marketing has evolved over the past 20 years through new forms and media. The first known medium is a blog, then came video content. Later on came social media and podcasting. All forms of content are now freely available to businesses to build audiences. 
 
 One of the most popular and prevalent forms of content marketing in the last 10 years is social media marketing. With platforms including Snapchat, Tik Tok, Facebook, and Instagram, entrepreneurs and influencers can tap into networks of connected users and establish tribes, while providing value in novel ways. The two types of businesses that benefit most from this form of marketing are e-commerce stores and influencers.
 
