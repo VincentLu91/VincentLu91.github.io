@@ -1,0 +1,6 @@
+Virtually every brand, product, service, and even entertainment piece is online nowadays. Even so, consumers are talking about their experiences with a product online through review sites and social media. Whatever was written gets quickly spread online.
+
+Companies are finding ways to monitor their brand online. Today there is a wealth of content to review for sentiment analysis. Therefore it is critical for companies to keep of reviews and any other social mentions.
+
+I have built a sentiment analysis project to analyze tweets. The objective is simple: to determine if a given tweet about a company or brand is positive, negative, or neutral. I will elaborate below.
+
