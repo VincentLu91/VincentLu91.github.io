@@ -16,7 +16,9 @@ Textblob computes polarity and subjectivity scores for a text. Polarity is the m
 
 Subjectivity is a measure for opinion mining. A subjectivity score is a floating point value that lies on [0, 1], where 1 represents an opinion and 0 represents factual information.
 
-For the purposes of this project, we use Textblob to calculate the polarity only as sentiment score. We will also ignore non-English text for now.
+For the purposes of this project, we use Textblob to calculate the polarity only as sentiment score.
+
+As an aside, Textblob has a translator module which can be used to translate text to a desired language for further processing.
 
 ### VADER
 
