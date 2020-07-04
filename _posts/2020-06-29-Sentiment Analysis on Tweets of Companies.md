@@ -10,6 +10,8 @@ Today there is a wealth of content to review for sentiment analysis. Organizatio
 
 The objective is simple: to determine if a given tweet about a topic (brand, product, or otherwise) is positive, negative, or neutral. I will elaborate below.
 
+Here is the data app, deployed to Heroku: https://analyze-tweets-proj.herokuapp.com
+
 ## Implementation
 
 The project was written in Flask along with Textblob and VADER libraries. I chose Flask because it allows me to specify where and how to display the UI for the end user to perform sentiment analysis. Textblob and VADER are fairly popular and useful libraries and I like to use them to compare their sentiment results when processing a given piece of text.
