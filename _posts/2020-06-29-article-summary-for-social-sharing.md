@@ -14,7 +14,7 @@ The data app uses the TextRank algorithm to compute the summary of an article. T
 
 The library used for this is the ["summa summarizer"](https://github.com/summanlp/textrank). It optimizes the similarity function and allows for control and configure different parameters in summarizing an article. This includes number of words, length as a proportion of the text, or even in a different language (for source text only). The app is written in Flask.
 
-![martymcfly](https://user-images.githubusercontent.com/3411100/86504589-260fe800-bd88-11ea-8693-e29e4909789a.png)
+![martymcfly](https://user-images.githubusercontent.com/3411100/86506899-c8889500-bda1-11ea-85f0-21717e8531c8.png)
 
 ## Challenges
 
