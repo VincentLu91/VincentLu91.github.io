@@ -14,7 +14,7 @@ Here is the data app, deployed to Heroku: https://analyze-tweets-proj.herokuapp.
 
 ## Implementation
 
-The project was written in Flask along with Textblob and VADER libraries. I chose Flask because it allows me to specify where and how to display the UI for the end user to perform sentiment analysis. Textblob and VADER are fairly popular and useful libraries and I like to use them to compare their sentiment results when processing a given piece of text.
+The data application was written in Flask along with Textblob and VADER libraries. I chose Flask because it allows me to specify where and how to display the UI for the end user to perform sentiment analysis. Textblob and VADER are fairly popular and useful libraries and I like to use them to compare their sentiment results when processing a given piece of text.
 
 For data scraping, I used the [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) Python Library. It enables the app to query tweets by topic name, username, dates, and any number of posts. I chose to build the application behind a wider use case by scraping 10 tweets by topic name. As well, I used the Python ['translate'](https://pypi.org/project/translate/) and [langdetect](https://pypi.org/project/langdetect/) libraries to assess the language of the source tweet before translating to English for sentiment processing.
 
