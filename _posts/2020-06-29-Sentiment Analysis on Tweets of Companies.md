@@ -14,15 +14,17 @@ Here is the data app, deployed to Heroku: https://analyze-tweets-proj.herokuapp.
 
 ## Implementation
 
-The data application was written in Flask along with Textblob and VADER libraries. I chose Flask because it allows me to specify where and how to display the UI for the end user to perform sentiment analysis. Textblob and VADER are fairly popular and useful libraries and I like to use them to compare their sentiment results when processing a given piece of text.
+The data application was written in Flask and the text processing libraries used were Textblob and VADER. I chose Flask because it allows me to specify where and how to display the UI for the end user to perform sentiment analysis. Textblob and VADER are popular sentiment packages that work out-of-the-box and I like to use them to compare their sentiment results when processing a piece of text.
 
-For data scraping, I used the [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) Python Library. It enables the app to query tweets by topic name, username, dates, and any number of posts. I chose to build the application behind a wider use case by scraping 10 tweets by topic name. As well, I used the Python ['translate'](https://pypi.org/project/translate/) and [langdetect](https://pypi.org/project/langdetect/) libraries to assess the language of the source tweet before translating to English for sentiment processing.
+For data scraping, I used the [GetOldTweets3](https://pypi.org/project/GetOldTweets3/) Python Library. It enables the app to query tweets by topic name, username, dates, and any number of posts. The application currently queries 10 tweets by each topic name being processed.
+
+As well, I used the Python ['translate'](https://pypi.org/project/translate/) and [langdetect](https://pypi.org/project/langdetect/) libraries to assess the language of the source tweet before translating to English for sentiment processing. However, the sourced tweets are displayed in their original language with the sentiments returned.
 
 ### Textblob
 
-Textblob computes polarity and subjectivity scores for a text. Polarity is the main metric that indicates whether a piece is positive or negative. The polarity score (floating point value) lies on a range of [-1, 1] where positive is 1 and negative -1.
+Textblob computes polarity and subjectivity scores for a text. Polarity is the main metric that indicates whether a piece of text is positive or negative. The polarity score (floating point value) lies on a range of [-1, 1] where positive is 1 and negative -1.
 
-Subjectivity is a measure for opinion mining. A subjectivity score is a floating point value that lies on [0, 1], where 1 represents an opinion and 0 represents factual information.
+Subjectivity is a measure for opinion mining. A subjectivity score is a floating point value that lies on [0, 1], where 1 represents a strong opinion and 0 represents highly factual information.
 
 For the purposes of this project, we use Textblob to calculate the polarity only as sentiment score.
 
@@ -43,19 +45,19 @@ The sentiment of a piece of text is determined as follows:
 
 The sentiments returned by Textblob and VADER are not always the same. Textblob calculates polarity and subjectivity as sentiment analysis metrics. A possible explanation may be the available set of vocabularity for VADER to process. VADER works well with slangs and emojis, which are commonplace in social media platforms such as Twitter.
 
-VADER is also more thorough with computing sentiments as it calculates individual sentiment scores (negative, neutral, and positive) as well as calculating the cumulative/compound score. This gives us a more accurate understanding of the opinion expressed.
+VADER is also more thorough with computing sentiments as it calculates individual sentiment scores (negative, neutral, and positive) as well as calculating the cumulative/compound score. This gives us a more complete understanding of the opinion expressed.
 
 ## Challenges
 
-The data application is not without its limitations. During development an app would attempt to process tweet texts that simply cannot be processed. This returned a 400 error. I had to create a try/except block to attempt to translate and if it couldn't, return a 'Cannot be processed' string in both Textblob and VADER sentiment columns:
+Building the data application was not without its limitations. During development the app would attempt to process tweets that simply cannot be processed. This returned a 400 error. I later created a try/except block to attempt to translate and if it couldn't, it would return a 'Cannot be processed' string in both Textblob and VADER sentiment columns:
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/86506083-04b7f780-bd9a-11ea-8a90-3bbbaaca3c00.png)
 
 By entering the tweet URL in the browser, I can see that there are no textual contents.
 
-Another issue I encountered during development was the use of Textblob's translate module. When I first started using it, the translation module worked before the Textblob or VADER could process the text. After 3 days later I tried the data app again it returned an error, with the message ```textblob.exceptions.NotTranslated: Translation API returned the input string unchanged.``` After much research, this turns out to be a known problem as discussed in this [StackOverflow forum](https://stackoverflow.com/questions/35420602/python-textblob-translation-api-error/35425227) - the Textblob translate module depends on the Google Translate API so  using it causes errors intermittently.
+Another issue I encountered during development was the use of Textblob's translate module. When I first started using it, the translation module worked before the Textblob or VADER could process the text. After 3 days later I tried the data app again it returned an error, with the message ```textblob.exceptions.NotTranslated: Translation API returned the input string unchanged.``` After much research, this turned out to be a known problem as addressed in this [StackOverflow forum](https://stackoverflow.com/questions/35420602/python-textblob-translation-api-error/35425227) - the Textblob translate module depends on the Google Translate API so  using it causes errors intermittently.
 
-To find a stable library, I came across the Python translate library and it has worked ever since. Whether or not it continues to work into the future, only time will tell.
+To find a stable library, I came across the Python 'translate' library and it has worked ever since. Whether or not it continues to work into the future, only time will tell.
 
 ## Some ideas for Improvement
 
@@ -64,6 +66,6 @@ To find a stable library, I came across the Python translate library and it has 
 
 ## Conclusion
 
-Although the libraries Textblob and VADER use solid algorithms for sentiment analysis, they may not always be accurate. This is why it helps to have a human eye to examine the raw tweet itself by looking at the text and going into the permalink. Perhaps there was a context behind the tweet being a reply to another.
+Although the libraries Textblob and VADER use algorithms for sentiment analysis, they may not always be accurate. This is why it helps to have a human eye to examine the raw tweet itself by looking at the text and going into the permalink. Perhaps there was a context behind the tweet being a reply to another.
 
-But the app serves as a big proxy to indicate whether a given piece of text on social media is negative, positive or neutral. It also serves as a good feasibility study into the minds of users and consumers and help organizations to respond accordingly. Beyond Twitter, sentiment analysis can be useful in a wide array of domains.
+But the app serves as a proxy to indicate whether a given piece of text on social media is negative, positive or neutral. It also serves as a good feasibility study into the minds of users and consumers and help organizations to respond accordingly. Beyond Twitter, sentiment analysis can be useful in a wide array of domains.
