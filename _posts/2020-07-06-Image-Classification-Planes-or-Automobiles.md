@@ -1,20 +1,20 @@
-The image binary classification application deals with the basic distinguish between airplanes and automobiles. The application is written in streamlit with a Keras model trained from VGG16 API.
+The image binary classification application deals with the basic distinction between photos of airplanes and automobiles. The application was written in streamlit with a pre-trained VGG16 model from the Keras deep learning library.
 
-The application is deployed in two forms: through a production app cloud platform (Heroku) and also through a contain platform (Docker).
+The application is deployed in two forms: through a production app cloud platform (Heroku) and also through a container platform (Docker).
 
 ## Implementation
 
 The first part of the implementation begins with training a custom VGG pre-trained model using a VGG16 Keras API. The VGG16 pre-trained model requires little custom dataset for training due to its transfer learning capabilities.
 
-I experimented with scraping 100 photos of airplanes and 100 photos of cars from Google images. I organized them into two subfolders in the dataset and fed them into the VGG16 pre-trained model.
+I scraped 100 photos of airplanes and 100 photos of cars from Google images. I organized them into two subfolders in the dataset and fed them into the VGG16 pre-trained model.
 
-The VGG16 pre-trained model was customized by marking a loaded layers as not trainable and instead adding new classifier layers for training. To faciliate the training of the model, I used a function for running test harness to evaluate how well the model can distinguish the contents in a photograph. Once completed, the model is saved.
+The model was customized by removing the final fully connected layers and adding new classifier layers for training. To faciliate the training of the model, I used a function for running test harness to evaluate performance of the model configuration. Once completed, the model is saved.
 
-Next, I wrote the application using the streamlit library. Streamlit is a powerful open-source library to write data applications in fewer lines of code than standard web frameworks. The interface is simple: the user is given an image file picker to select or drag and drop a photo. Underneath it is a "Process" button which when clicked, will call a function which loads the saved VGG model to predict the class of the photo. The function will then return a string value that indicates the user whether the photo in question is classified as airplane, automobile, or neither airplane nor automobile.
+Next, I wrote the application using the streamlit library. Streamlit is a powerful open-source library that lets developers write data applications in fewer lines of code than standard web frameworks. The interface is simple: the user is given an image file picker to select or drag and drop a photo. Underneath it is a "Process" button that when clicked, will call a function which loads the saved VGG model to predict the class of the photo. The function will then return a string value that indicates whether the photo in question contains either an airplane, automobile, or neither.
 
-However, the focus of the the project implementation is on the deployment of the deep learning model. The first approach was through deploying to Heroku. I chose Heroku because it supports most web development languages and frameworks and that the speed of deployment is faster for smaller web-based data apps.
+The second part of the project implementation focuses on the deployment of the deep learning model. The deployment was done in two forms: through a Platform as a service (Heroku) and the other through a container (Docker). I chose Heroku because it supports most web development languages and frameworks and that the speed of deployment is faster for smaller web-based data apps.
 
-Normally, training a computer vision model would take hours and would result into larger model file, but because I used a few custom images and the VGG model used was pre-trained, the size is much smaller - at ~85-86MB. The other code files are smaller sizes so the entire codebase was committed to a Github repository. 
+Normally, training a computer vision model would take hours and would result into larger model file, but because I used a few custom images and that I used a pre-trained model for transfer learning, the size of the saved model is much smaller - at ~85-86MB. The other code files are smaller sizes so the entire codebase was committed to a Github repository.
 
 From this point on, deploying the data app to production to Heroku because very straightforward. The deployed app is given here: https://airplanes-or-cars.herokuapp.com
 
@@ -24,20 +24,21 @@ Finally, I wrote a Dockerfile for building a docker image and running a containe
 
 ## Heroku or Docker?
 
-Heroku is an intuitive PaaS to use from the viewpoint of a non-technical user. It appears like any other web application: enter the URL and the app is accessible.
+Heroku is an intuitive PaaS to use and the the app in production is easy to access from the viewpoint of a non-technical user. Like any other web application, any user can enter the URL to view the app.
 
-Beneath the surface, Heroku applications run on a lightweight container thanks to the Procfile that contains the commands to run at launch. However it defines its underlying container so there are restrictions in how data apps are deployed. Certain deployment features are priced
+Beneath the surface, Heroku applications run on a lightweight container thanks to the Procfile (needs to be committed to the repo) that contains the commands to run at launch. However Heroku defines its underlying container so there are restrictions in how data apps are deployed. Additional deployment features are paid features.
 
-Meanwhile, Docker (CaaS) offers developers flexibility in configuring containers for their applications. They have a container standards and developers can build their images on top of any other base image to customize the containers that the applications can run on.
+Meanwhile, Docker (CaaS) offers developers flexibility in configuring containers for their applications. Developers can build their images on top of any other base image to customize the containers that their applications run on.
 
-Both have their own pros and cons and they serve different purposes. Heroku applications are suited for developers to prioritize app development without worrying about hosting on and managing app delivery pipeline, whereas Docker applications allow for custom development and hosting/deployment options at much lower costs.
+Both Heroku and Docker have their own pros and cons and they serve different purposes. Heroku applications are suited for developers who prioritize app development without worrying about hosting on servers and managing app delivery pipeline, whereas Docker applications allow for custom development and hosting/deployment options at much lower costs.
 
-My experience with Heroku is that the deployment options are limited, but they are suitable for my interests in developing software and deep learning systems, but  I am certainly open to any situation that calls for more customizations when running containers.
+My experience with Heroku is that the deployment options are limited, but they are suitable for my interests in developing software and deep learning systems, but  I am certainly open to any situation that calls for running customized containers.
 
 ## Some Ideas for Improvement
 - pivot to more sophisticated classification use cases, such as multi-class classification on medical images to diagnose a disease
+- apply image augmentation to create more diversity of images for training to reduce any potential overfitting or biases.
 - add additional pre-trained classification models such as ResNet and Inception for comparison between them in performance.
 
 ## Conclusion
 
-Image classification has evolved and matured as a deep learning application. Therefore there is much to explore from configuring pre-trained models and applying it to more business areas. Meanwhile,having knowledge of both Heroku and Docker enable me to choose how and where to deploy depending on business needs.
+Image classification has evolved and matured as a deep learning application. Therefore there is much to explore from configuring pre-trained models and applying it to more business areas. Meanwhile, having knowledge of both Heroku and Docker enable me to choose how and where to deploy depending on business needs.
