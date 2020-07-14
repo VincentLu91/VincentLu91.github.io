@@ -42,7 +42,7 @@ With both models trained, I wrote a small data app to display the auto generatio
 
 You will find the demonstration of it here: https://youtu.be/OAgeJVUTXyw
 
-## Limitations
+## Limitations and Challenges
 
 Generative Adversarial Networks have only emerged in the mid-2010s, and it wasn't until 2017 that we have started to see state-of-the-art results. Up to this time, it is still incredibly difficult to replicate such results that are shown in GAN research papers.
 
@@ -53,6 +53,8 @@ The pre-trained PGGAN has been capable of generating somewhat plausible images o
 2) there are multiple code implementations and most of them are difficult to understand. Some documentations describe empirical instructions for reproducing such results but they may leave out certain details that otherwise would have been helpful to the machine learning practitioner. Furthermore, there are no official GAN modules to use that are available for efficient and rapid training.
 
 3) I had to train the GAN separately from the GPT-2. This is because I wanted to generate captions that accompany the images, but there are currently no image-to-text generation models that mimic the language of the captions corpus.
+
+Also, after checking out the code and attempting to run the application, the application complains of the incorrect number of weights and/or layers, although the code and weight files have been untouched.
 
 Overcoming these challenges took up the bulk of the project implementation. 
 
