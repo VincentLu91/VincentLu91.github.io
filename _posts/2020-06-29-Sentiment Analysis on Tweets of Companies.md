@@ -20,6 +20,8 @@ For data scraping, I used the [GetOldTweets3](https://pypi.org/project/GetOldTwe
 
 As well, I used the Python ['translate'](https://pypi.org/project/translate/) and [langdetect](https://pypi.org/project/langdetect/) libraries to assess the language of the source tweet before translating to English for sentiment processing. However, the sourced tweets are displayed in their original language with the sentiments returned.
 
+As well, the form was implemented with Flask request forms module for handling user input and error validation.
+
 ### Textblob
 
 Textblob computes polarity and subjectivity scores for a text. Polarity is the main metric that indicates whether a piece of text is positive or negative. The polarity score (floating point value) lies on a range of [-1, 1] where positive is 1 and negative -1.
@@ -61,8 +63,9 @@ To find a stable library, I came across the Python 'translate' library and it ha
 
 ## Some ideas for Improvement
 
-- build in custom time windows so that user can select the window of tweets to his or her liking
-- display the retweets related to the main tweets returned as they may be indicators of sentiment by popularity
+- Build in custom time windows so that user can select the window of tweets to his or her liking. This helps the user to understand the context in a thread and the sentinent behind it
+- Display the retweets related to the main tweets returned as they may be indicators of sentiment by popularity
+- Implement WTForms in place of Flask request forms for validation. Besides form validation and error handling, WTForms offers features including CSRF and code injection, making it an all-around library to use. Error checks are done in the form entry, rather than passing the input to the application's server side and generating an HTTP error. This means that implementing WTForms would help the application to validate the input first before attempting a POST request.
 
 ## Conclusion
 
