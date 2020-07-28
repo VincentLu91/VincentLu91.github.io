@@ -10,7 +10,7 @@ Data app is deployed and can be accessed: https://technical-summary-proj.herokua
 
 ## Implementation
 
-The data app uses the TextRank algorithm to compute the summaries of an article. TextRank is derived from PageRank in that instead of ranking web pages, it is ranked by sentences. By converting sentences to word embeddings and computing their cosine similarity matrix scores, they would then be converted into a graph with sentences as vertices and edges as the scores. These scores represent the sentence rankings. For this use case, I limited the number of summaries of up to three so that users will not be overwhelmed with summaries to choose. Three 
+The data app uses the TextRank algorithm to compute the summaries of an article. TextRank is derived from PageRank in that instead of ranking web pages, it is ranked by sentences. By converting sentences to word embeddings and computing their cosine similarity matrix scores, they would then be converted into a graph with sentences as vertices and edges as the scores. These scores represent the sentence rankings. For this use case, I limited the number of summaries of up to three so that users will not be overwhelmed with summaries to choose.
 
 The library used for this is the ["summa summarizer"](https://github.com/summanlp/textrank). It optimizes the similarity function and allows for control and configure different parameters in summarizing an article. This includes number of words, length as a proportion of the text, or even in a different language (for source text only). The app is written in Flask.
 
