@@ -28,7 +28,7 @@ As stated in the beginning of the article, there are two categories of summariza
 
 But in most business use cases, summaries are shortened, paraphrased, and compacted, so usually new words of combinations of phrases are used, and progress is started to head towards that direction. One area of improvement I am considering for applying to the application is using an abstractive summarization model that can produce realistic, relevant summaries that are very close to human-level written summaries.
 
-Google AI has recently released a new model called the [Text-To-Text Transfer Transformer (T5)](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html). The T5 is an new general purpose model that uses transfer learning to produce state of the art results across domains including machine translation, Q&A (without access to outside text sources), text classification, language modelling, and abstractive text summarization.
+Google AI has recently released a new model called the [Text-To-Text Transfer Transformer (T5)](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html). The T5 is a new general purpose model that uses transfer learning to produce state of the art results across domains including machine translation, Q&A (without access to outside text sources), text classification, language modelling, and abstractive text summarization.
 
 Image from Google AI's blog post:
 ![martymcfly](https://user-images.githubusercontent.com/3411100/88609650-a73e6000-d052-11ea-98fe-f6c7bf3e9cdc.png)
