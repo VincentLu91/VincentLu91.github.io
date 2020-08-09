@@ -16,6 +16,8 @@ For established online stores, this is not an issue, but for bootstrapped founde
 
 ## Enter: The Instagram Content Generator
 
+![martymcfly](https://user-images.githubusercontent.com/3411100/89596643-c2b12400-d825-11ea-979b-92649fb4f340.png)
+
 Think of this is the Content Generator v0.1.
 
 I have come to realize this problem years ago when trying out online businesses, so I decided to create a proof of concept AI data app to help brands increase content marketing productivity on Instagram.
@@ -74,7 +76,7 @@ Future plans for improving capture generation include restricting the number of 
 
 The project is currently available in the form of a data app, but a possible next step would be to deploy the models into a web application and mobile application. This enables brands to accordingly select and generate a type of content of their choice before sharing on Instagram, which calls for more scraping.
 
-Plans for improving deployment process should not be neglected either. There are two possible routes. One, I consider deploying on other cloud platforms incuding Azure and AWS. The two platforms offer greater variety of options for hosting containerized applications in the cloud, however they both charge rates depending on the quantity of resources used. Two, as I wrote the application in Streamlit, Streamlit is on its way to roll out its own deployment solution - [Streamlit for Teams](https://www.streamlit.io/for-teams). At this time in writing, it is not available yet, but it may potentially be a faster and efficient route to deploying data applications. I look forward to start using the tool once it rolls out, as it may allow possibilities of data apps live for real users.
+Plans for improving deployment process should not be neglected either. There are two possible routes. One, I consider deploying on other cloud platforms including Azure and AWS. The two platforms offer greater variety of options for hosting containerized applications in the cloud, however they both charge rates depending on the quantity of resources used. Two, as I wrote the application in Streamlit, Streamlit is on its way to roll out its own deployment solution - [Streamlit for Teams](https://www.streamlit.io/for-teams). At this time in writing, it is not available yet, but it may potentially be a faster and efficient route to deploying data applications. I look forward to start using the tool once it rolls out, as it may allow possibilities of data apps live for real users.
 
 ## Conclusion
 
