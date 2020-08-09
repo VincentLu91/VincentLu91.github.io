@@ -16,11 +16,13 @@ The second part of the project implementation focuses on the deployment of the d
 
 Normally, training a computer vision model would take hours and would result into larger model file, but because I used a few custom images and that I used a pre-trained model for transfer learning, the size of the saved model is much smaller - at ~85-86MB. The other code files are smaller sizes so the entire codebase was committed to a Github repository.
 
-From this point on, deploying the data app to production to Heroku because very straightforward. The deployed app is given here: https://airplanes-or-cars.herokuapp.com
+From this point on, I deployed the data app to production using only Heroku. It was straightforward as the size of the project folder was relatively small. The deployed app is given here: https://airplanes-or-cars.herokuapp.com
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/86633685-f686f880-bf9e-11ea-94d3-45607d88d644.png)
 
 Finally, I wrote a Dockerfile for building a docker image and running a container through a computer. Like Heroku, deploying through Docker is fast just by a few commands for running a container.
+
+As the classifier is avaialble as a container and a Heroku-deployed app, this project serves as a feasibility study not only of computer vision, but also of a comparison of both deployment options.
 
 ## Heroku or Docker?
 
@@ -28,16 +30,27 @@ Heroku is an intuitive PaaS to use and the the app in production is easy to acce
 
 Beneath the surface, Heroku applications run on a lightweight container thanks to the Procfile (needs to be committed to the repo) that contains the commands to run at launch. However Heroku defines its underlying container so there are restrictions in how data apps are deployed. Additional deployment features are paid features.
 
-Meanwhile, Docker (CaaS) offers developers flexibility in configuring containers for their applications. Developers can build their images on top of any other base image to customize the containers that their applications run on.
+Meanwhile, Docker (CaaS) offers developers flexibility in configuring containers for their applications. Developers can build their images on top of any other base image to customize the containers that their applications run on. Running containers is highly convenient because their applications can run as isolated pieces of software regardless of the machine it runs on.
+
+The advantage of this is that a Docker container can then be hosted on a cloud platform in production. Usually they can be run on platforms such as Heroku, Azure, AWS, and Google Cloud Platform (GCP).
 
 Both Heroku and Docker have their own pros and cons and they serve different purposes. Heroku applications are suited for developers who prioritize app development without worrying about hosting on servers and managing app delivery pipeline, whereas Docker applications allow for custom development and hosting/deployment options at much lower costs.
 
 My experience with Heroku is that the deployment options are limited, but they are suitable for my interests in developing software and deep learning systems, but  I am certainly open to any situation that calls for running customized containers.
 
+## Limitations and Challenges
+
+My limitations and challenges are mostly rooted in the deployment process. While the classifier application is deployed on Heroku without trouble, my attempt to deploy to production via Docker did not help much. Like the IG Content Generator, the classifier containerized app encountered some errors when deploying to Heroku:
+
+![martymcfly](https://user-images.githubusercontent.com/3411100/89724679-32fda800-d9d4-11ea-9eb7-522cfe1ba06d.png)
+
+Heroku does not recognize the port that was written in the exposed port number that was specified in the Dockerfile. This is not the case when working with Flask, but with Streamlit applications the container is not able to the port number from Heroku.
+
 ## Some Ideas for Improvement
 - pivot to more sophisticated classification use cases, such as multi-class classification on medical images to diagnose a disease
 - apply image augmentation to create more diversity of images for training to reduce any potential overfitting or biases.
 - add additional pre-trained classification models such as ResNet and Inception for comparison between them in performance.
+- rewrite the data app in Flask before attempting to deploy to Heroku through Docker Registry.
 
 ## Conclusion
 
