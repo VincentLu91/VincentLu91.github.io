@@ -44,14 +44,17 @@ My limitations and challenges are mostly rooted in the deployment process. While
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/89724679-32fda800-d9d4-11ea-9eb7-522cfe1ba06d.png)
 
-Heroku does not recognize the port that was written in the exposed port number that was specified in the Dockerfile. This is not the case when working with Flask, but with Streamlit applications the container is not able to the port number from Heroku.
+Heroku does not recognize the port that was written in the exposed port number that was specified in the Dockerfile. This is not the case when working with Flask containers, but with Streamlit applications the container is not able to the port number from Heroku.
 
 ## Some Ideas for Improvement
 - pivot to more sophisticated classification use cases, such as multi-class classification on medical images to diagnose a disease
 - apply image augmentation to create more diversity of images for training to reduce any potential overfitting or biases.
 - add additional pre-trained classification models such as ResNet and Inception for comparison between them in performance.
-- rewrite the data app in Flask before attempting to deploy to Heroku through Docker Registry.
 
 ## Conclusion
 
-Image classification has evolved and matured as a deep learning application. Therefore there is much to explore from configuring pre-trained models and applying it to more business areas. Meanwhile, having knowledge of both Heroku and Docker enable me to choose how and where to deploy depending on business needs.
+Image classification has evolved and matured as a deep learning application. Therefore there is much to explore from configuring pre-trained models and applying it to more business areas.
+
+Development and deployment practices have not yet matured at this stage in the machine learning industry. Given the scope of the use case, it would make sense to deploy the classifier straight to Heroku without any need for containers. There's little to no configuration required and I could focus on development and tinker with different machine learning models while delivering results at speed.
+
+I'm not discounting Docker, though. The Docker Hub repository hosts thousands or millions of images that a machine learning practitioner could quickly choose to base on, provide their specification such as ports to expose and dependencies to install, and the containerized application can run anywhere as long as a platform can accommodate it.
