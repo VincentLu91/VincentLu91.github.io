@@ -68,7 +68,7 @@ Thus, I deployed the app to Docker. The advantage of using a containerized appli
 
 Heroku's free tier infrastructure does not have enough resources to accommodate the IG Content Generator's compute needs. As seen in the heroku logs above, the app's usage far exceeded Heroku's memory quota and the app crashed.
 
-## Plans for future
+## Ideas for Improvement
 
 Until GANs continue to advance and evolve, the capabilities are not fully available to easily generate polished Instagram posts. However, I plan to improve on this project when there is potential to experiment with new GANs that make up for the shortcomings that I have encountered, while accessing hardware to reproduce results from GAN research papers. I also plan to expand the number of use cases by training the generator on different types of content, such as promotional posts and product posts, and content of other formats such as Instagram stories.
 
@@ -76,7 +76,9 @@ Future plans for improving capture generation include restricting the number of 
 
 The project is currently available in the form of a data app, but a possible next step would be to deploy the models into a web application and mobile application. This enables brands to accordingly select and generate a type of content of their choice before sharing on Instagram, which calls for more scraping.
 
-Plans for improving deployment process should not be neglected either. There are two possible routes. One, I consider deploying on other cloud platforms including Azure and AWS. The two platforms offer greater variety of options for hosting containerized applications in the cloud, however they both charge rates depending on the quantity of resources used. Two, as I wrote the application in Streamlit, Streamlit is on its way to roll out its own deployment solution - [Streamlit for Teams](https://www.streamlit.io/for-teams). At this time in writing, it is not available yet, but it may potentially be a faster and efficient route to deploying data applications. I look forward to start using the tool once it rolls out, as it may allow possibilities of data apps live for real users.
+Plans for improving deployment process should not be neglected either. There are two possible routes. One, I consider deploying on other cloud platforms including Azure and AWS. The two platforms offer greater variety of options for hosting containerized applications in the cloud, however they both charge rates depending on the quantity of resources used. Two, as I wrote the application in Streamlit, Streamlit is on its way to roll out its own deployment solution - [Streamlit for Teams](https://www.streamlit.io/for-teams). At this time in writing, it is not available yet, but it may potentially be a faster and efficient route to deploying data applications. Time will tell when it arrives, as I look forward to testing out Streamlit for Teams and how well it will improve the deployment workflow.
+
+I feel that up to this time, the development and deployment process has yet to be streamlined for machine learning practitioners to deploy models at scale for a wide range of domains, such as generative adversarial networks, but it may take a few years for such practices to mature.
 
 ## Conclusion
 
