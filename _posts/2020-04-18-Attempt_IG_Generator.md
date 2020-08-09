@@ -38,7 +38,7 @@ I used a cloud platform to train the GAN with the dataset using a Tesla V100. Th
 
 For the GPT-2 training, I took all the captions that I scraped and I combined them into a single text file. This is because applying the GPT-2 on 20,000+ text files for training was unnecessarily long. I then trained the GPT-2 on the text file using a jupyter notebook on Google Colab. In contrast to the GAN training time, the GPT-2 training time took 2-3 minutes to generate a model.
 
-With both models trained, I wrote a small data app to display the auto generation of visual and text content. 
+With both models trained, I wrote a small data app to display the auto generation of visual and text content. This app was then deployed into a containerized environment for usage and reproducibility.
 
 You will find the demonstration of it here: https://youtu.be/OAgeJVUTXyw
 
@@ -54,9 +54,17 @@ The pre-trained PGGAN has been capable of generating somewhat plausible images o
 
 3) I had to train the GAN separately from the GPT-2. This is because I wanted to generate captions that accompany the images, but there are currently no image-to-text generation models that mimic the language of the captions corpus.
 
-Also, after checking out the code and attempting to run the application, the application complains of the incorrect number of weights and/or layers, although the code and weight files have been untouched.
+### Deployment is Tough Business
 
-Overcoming these challenges took up the bulk of the project implementation. 
+Another major limitation I encountered is the ability to deploy the data application to production, end-to-end. Building the IG Content Generator meant that larger assets are required for the app to run: h5 model files that were trained earlier on 20,000 images, and language model files that were trained on captions take up 80+% of the repo space, including a folder that wasn't included in the repo as I had exhausted the quota provided by the git LFS service. If we consider the GAN and GPT-2 model file sizes, they add up to more than 1 GB.
+
+The size of both GAN and GPT-2 model files made it difficult to push the app to production. I had considered deploying the app to Heroku without the container but Heroku has a slug limit size of 500 MB. Even if I remove other files from the repo, it is not enough to reduce the slug size to an acceptable level for the app to be deployable.
+
+Thus, I deployed the app to Docker. The advantage of using a containerized application is that it allows any user to run the application immediately on her computer without needing to manually install dependencies. However, after containerizing the application, I attempted to deploy it to Heroku once again, this time through its Container Registry. I created the application in production, but it still fails:
+
+![martymcfly](https://user-images.githubusercontent.com/3411100/89723607-c3cd8700-d9c6-11ea-862a-d67ed534b862.png)
+
+Heroku's free tier infrastructure does not have enough resources to accommodate the IG Content Generator's compute needs. As seen in the heroku logs above, the app's usage far exceeded Heroku's memory quota and the app crashed.
 
 ## Plans for future
 
@@ -65,6 +73,8 @@ Until GANs continue to advance and evolve, the capabilities are not fully availa
 Future plans for improving capture generation include restricting the number of hashtags to 30 and removing duplicates. Instagram currently does not allow users to add more than 30 hashtags to posts or comments. It is critical to refine the use case to align with Instagram's policies.
 
 The project is currently available in the form of a data app, but a possible next step would be to deploy the models into a web application and mobile application. This enables brands to accordingly select and generate a type of content of their choice before sharing on Instagram, which calls for more scraping.
+
+Plans for improving deployment process should not be neglected either. There are two possible routes. One, I consider deploying on other cloud platforms incuding Azure and AWS. The two platforms offer greater variety of options for hosting containerized applications in the cloud, however they both charge rates depending on the quantity of resources used. Two, as I wrote the application in Streamlit, Streamlit is on its way to roll out its own deployment solution - [Streamlit for Teams](https://www.streamlit.io/for-teams). At this time in writing, it is not available yet, but it may potentially be a faster and efficient route to deploying data applications. I look forward to start using the tool once it rolls out, as it may allow possibilities of data apps live for real users.
 
 ## Conclusion
 
