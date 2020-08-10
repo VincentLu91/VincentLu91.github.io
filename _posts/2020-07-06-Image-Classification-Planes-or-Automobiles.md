@@ -48,7 +48,7 @@ My limitations and challenges are mostly rooted in the deployment process. While
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/89724679-32fda800-d9d4-11ea-9eb7-522cfe1ba06d.png)
 
-Heroku does not recognize the port that was written in the exposed port number that was specified in the Dockerfile. This is not the case when working with Flask containers, but with Streamlit applications the container is not able to the port number from Heroku.
+I also attempted to deploy the Streamlit containerized application to Heroku, however it does not recognize the port that was written in the exposed port number that was specified in the Dockerfile. This is not the case when working with Flask containers, but with Streamlit applications the container is not able to the port number from Heroku.
 
 Finally, both Streamlit and containerized Flask versions of the app can only resize images of certain sizes to 224 * 224 * 3:
 
