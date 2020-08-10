@@ -18,6 +18,8 @@ Normally, training a computer vision model would take hours and would result int
 
 From this point on, I deployed the data app to production using only Heroku. It was straightforward as the size of the project folder was relatively small. The deployed app is given here: https://airplanes-or-cars.herokuapp.com
 
+The app is also rewritten in Flask and successfully Dockerized and deployed to production: https://airplanes-or-cars-docker-flask.herokuapp.com/
+
 ![martymcfly](https://user-images.githubusercontent.com/3411100/86633685-f686f880-bf9e-11ea-94d3-45607d88d644.png)
 
 Finally, I wrote a Dockerfile for building a docker image and running a container through a computer. Like Heroku, deploying through Docker is fast just by a few commands for running a container.
@@ -45,6 +47,10 @@ My limitations and challenges are mostly rooted in the deployment process. While
 ![martymcfly](https://user-images.githubusercontent.com/3411100/89724679-32fda800-d9d4-11ea-9eb7-522cfe1ba06d.png)
 
 Heroku does not recognize the port that was written in the exposed port number that was specified in the Dockerfile. This is not the case when working with Flask containers, but with Streamlit applications the container is not able to the port number from Heroku.
+
+Finally, both Streamlit and containerized Flask versions of the app can only resize images of certain sizes to 224 * 224 * 3:
+
+![martymcfly](https://user-images.githubusercontent.com/3411100/89756917-cbb62580-dab1-11ea-8ba0-fe51ab61241d.png)
 
 ## Some Ideas for Improvement
 - pivot to more sophisticated classification use cases, such as multi-class classification on medical images to diagnose a disease
