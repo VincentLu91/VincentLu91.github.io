@@ -18,13 +18,15 @@ Normally, training a computer vision model would take hours and would result int
 
 From this point on, I deployed the data app to production using only Heroku. It was straightforward as the size of the project folder was relatively small. The deployed app is given here: https://airplanes-or-cars.herokuapp.com
 
-The app is also rewritten in Flask and successfully Dockerized and deployed to production: https://airplanes-or-cars-docker-flask.herokuapp.com/
-
 ![martymcfly](https://user-images.githubusercontent.com/3411100/86633685-f686f880-bf9e-11ea-94d3-45607d88d644.png)
 
 Finally, I wrote a Dockerfile for building a docker image and running a container through a computer. Like Heroku, deploying through Docker is fast just by a few commands for running a container.
 
-As the classifier is avaialble as a container and a Heroku-deployed app, this project serves as a feasibility study not only of computer vision, but also of a comparison of both deployment options.
+The app is also rewritten in Flask and successfully Dockerized and deployed to production: https://airplanes-or-cars-docker-flask.herokuapp.com/
+
+![martymcfly](https://user-images.githubusercontent.com/3411100/89757005-0f109400-dab2-11ea-8338-69da014cabd1.png)
+
+As the classifier is available as a container and a Heroku-deployed app, this project serves as a feasibility study not only of computer vision, but also of a comparison of both deployment options.
 
 ## Heroku or Docker?
 
