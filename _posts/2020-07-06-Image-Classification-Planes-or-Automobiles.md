@@ -10,7 +10,7 @@ The first part of the implementation begins with training a custom VGG pre-train
 
 I scraped 100 photos of airplanes and 100 photos of cars from Google images. I organized them into two subfolders in the dataset and fed them into the VGG16 pre-trained model.
 
-The model was customized by removing the final fully connected layers and adding new classifier layers for training. To faciliate the training of the model, I used a function for running test harness to evaluate performance of the model configuration. Once completed, the model is saved.
+The model was customized by removing the final fully connected layers and adding new classifier layers for training. To faciliate the training of the model, I used a function for running test harness to evaluate performance of the model configuration. The model was trained to have ~87.6% accuracy. Once completed, the model is saved.
 
 Next, I wrote the application using the streamlit library. Streamlit is a powerful open-source library that lets developers write data applications in fewer lines of code than standard web frameworks. The interface is simple: the user is given an image file picker to select or drag and drop a photo. Underneath it is a "Process" button that when clicked, will call a function which loads the saved VGG model to predict the class of the photo. The function will then return a string value that indicates whether the photo in question contains either an airplane, automobile, or neither.
 
