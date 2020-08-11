@@ -12,7 +12,7 @@ Today there is a wealth of content to review for sentiment analysis. Organizatio
 
 The objective is simple: to determine if a given tweet about a topic (brand, product, or otherwise) is positive, negative, or neutral. I will elaborate below.
 
-Here is the data app, deployed to Heroku: https://analyze-tweets-proj.herokuapp.com
+Here is the data app, deployed to [Heroku](https://analyze-tweets-proj.herokuapp.com).
 
 You can find the repository [here](https://github.com/VincentLu91/Tweet-Analyzer-by-Topic).
 
