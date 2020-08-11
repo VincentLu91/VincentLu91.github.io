@@ -2,7 +2,7 @@
 
 The image binary classification application deals with the basic distinction between photos of airplanes and automobiles. The application was written in streamlit with a pre-trained VGG16 model from the Keras deep learning library.
 
-The application is deployed in two forms: through a production app cloud platform (Heroku) and also through a container platform (Docker).
+The application is deployed to production in two forms: without container and with container.
 
 ## Implementation
 
