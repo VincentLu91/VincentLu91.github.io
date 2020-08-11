@@ -12,6 +12,8 @@ The objective is simple: to determine if a given tweet about a topic (brand, pro
 
 Here is the data app, deployed to Heroku: https://analyze-tweets-proj.herokuapp.com
 
+You can find the repository [here](https://github.com/VincentLu91/Tweet-Analyzer-by-Topic).
+
 ## Implementation
 
 The data application was written in Flask and the text processing libraries used were Textblob and VADER. I chose Flask because it allows me to specify where and how to display the UI for the end user to perform sentiment analysis. Textblob and VADER are popular sentiment packages that work out-of-the-box and I like to use them to compare their sentiment results when processing a piece of text.
