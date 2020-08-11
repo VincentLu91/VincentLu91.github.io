@@ -1,3 +1,5 @@
+# Article Summary For Social Sharing
+
 Text summarization is a common branch of NLP where a corpus of text is reduced to compact pieces of text without compromising the key ideas of the source content. Given the explosion of written content, there is a growing need for summarization. Readers will find summarization useful when they need to quickly understand pieces of text as they go about carrying out related tasks.
 
 There are two types of summarization - extractive and abstractive. Extractive summarization scores sentences in an article and chooses the highest ranked phrases as concise pieces of text that underscore the meaning of the source text. However, it does so by mostly extracting sentences directly from the content to produce a summary, so the exact words are used. Much of the applied work on text summarization today is done on extractive summarization.
@@ -6,7 +8,9 @@ Abstractive summarization examines the source text and produces an original cohe
 
 I have built a data app that uses an extractive summarization technique - TextRank - to generate summaries that a user can paste on their LinkedIn feeds. Sometimes I would scroll around on LinkedIn and find that the users would quote a phrase from a technical article or write their own thoughts along with the article URL.  This would be an applicable use case where text summarization can reduce the time it takes to help users get their points across when engaging in social sharing.
 
-Data app is deployed and can be accessed: https://technical-summary-proj.herokuapp.com.
+Data app is deployed and can be accessed [here](https://technical-summary-proj.herokuapp.com).
+
+You can find the repository [here](https://github.com/VincentLu91/Article-Summarizer-for-Social-Shares).
 
 ## Implementation
 
