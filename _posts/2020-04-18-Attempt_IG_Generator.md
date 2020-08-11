@@ -24,6 +24,10 @@ I have come to realize this problem years ago when trying out online businesses,
 
 The data app is built with the goal of enabling businesses to grow their audiences online by auto-generating Instagram content at scale.
 
+You can find the repository [here](https://github.com/VincentLu91/PGGAN_IG_data_app).
+
+You will find the demonstration of it [here](https://youtu.be/OAgeJVUTXyw).
+
 ## The Architecture of the Instagram Content Generator
 
 The IG Content Generator is powered by two deep learning models: a pre-trained Generative Adversarial Network (GAN) for generating visual content, and a pre-trained GPT-2 language model for generating caption content.
@@ -41,8 +45,6 @@ I used a cloud platform to train the GAN with the dataset using a Tesla V100. Th
 For the GPT-2 training, I took all the captions that I scraped and I combined them into a single text file. This is because applying the GPT-2 on 20,000+ text files for training was unnecessarily long. I then trained the GPT-2 on the text file using a jupyter notebook on Google Colab. In contrast to the GAN training time, the GPT-2 training time took 2-3 minutes to generate a model.
 
 With both models trained, I wrote a small data app to display the auto generation of visual and text content. This app was then deployed into a containerized environment for usage and reproducibility.
-
-You will find the demonstration of it here: https://youtu.be/OAgeJVUTXyw
 
 ## Limitations and Challenges
 
