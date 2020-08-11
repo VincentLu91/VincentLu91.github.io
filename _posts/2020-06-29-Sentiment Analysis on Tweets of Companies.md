@@ -1,3 +1,5 @@
+# Sentiment Analysis on Tweets of Companies
+
 Sentiment Analysis has become a widely discussed topic in the field of Natural Language Processing. The increasing volume of text-based data allows for opportunities to draw insights from the attitudes expressed. Some applications of sentiment analysis include: 
 
 - analyzing customer reviews so companies can respond accordingly, 
