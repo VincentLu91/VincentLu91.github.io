@@ -1,3 +1,5 @@
+# Image Classification and Production Deployment Processes
+
 The image binary classification application deals with the basic distinction between photos of airplanes and automobiles. The application was written in streamlit with a pre-trained VGG16 model from the Keras deep learning library.
 
 The application is deployed in two forms: through a production app cloud platform (Heroku) and also through a container platform (Docker).
@@ -16,13 +18,13 @@ The second part of the project implementation focuses on the deployment of the d
 
 Normally, training a computer vision model would take hours and would result into larger model file, but because I used a few custom images and that I used a pre-trained model for transfer learning, the size of the saved model is much smaller - at ~85-86MB. The other code files are smaller sizes so the entire codebase was committed to a Github repository.
 
-From this point on, I deployed the data app to production using only Heroku. It was straightforward as the size of the project folder was relatively small. The deployed app is given here: https://airplanes-or-cars.herokuapp.com
+From this point on, I deployed the data app to production using only Heroku. It was straightforward as the size of the project folder was relatively small. The deployed app is given [here](https://airplanes-or-cars.herokuapp.com). Corresponding repository [here](https://github.com/VincentLu91/airplanes_or_cars).
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/86633685-f686f880-bf9e-11ea-94d3-45607d88d644.png)
 
 Finally, I wrote a Dockerfile for building a docker image and running a container through a computer. Like Heroku, deploying through Docker is fast just by a few commands for running a container.
 
-The app is also rewritten in Flask and successfully Dockerized and deployed to production: https://airplanes-or-cars-docker-flask.herokuapp.com/
+The app is also rewritten in Flask and successfully Dockerized and deployed to production, which you can find [here](https://airplanes-or-cars-docker-flask.herokuapp.com/). Corresponding repository [here](https://github.com/VincentLu91/airplanes-or-cars-docker-flask).
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/89757005-0f109400-dab2-11ea-8338-69da014cabd1.png)
 
