@@ -80,7 +80,7 @@ The project is currently available in the form of a data app, but a possible nex
 
 Plans for improving deployment process should not be neglected either. There are two possible routes. One, I consider deploying on other cloud platforms including Azure and AWS. The two platforms offer greater variety of options for hosting containerized applications in the cloud, however they both charge rates depending on the quantity of resources used. Two, as I wrote the application in Streamlit, Streamlit is on its way to roll out its own deployment solution - [Streamlit for Teams](https://www.streamlit.io/for-teams). At this time in writing, it is not available yet, but it may potentially be a faster and efficient route to deploying data applications. Time will tell when it arrives, as I look forward to testing out Streamlit for Teams and how well it will improve the deployment workflow.
 
-I feel that up to this time, the development and deployment process has yet to be streamlined for machine learning practitioners to deploy models at scale for a wide range of domains, such as generative adversarial networks, but it may take a few years for such practices to mature.
+I feel that up to this time, the development and deployment process has yet to be streamlined for machine learning practitioners to deploy models at scale for highly complex domains, such as generative adversarial networks, but it may take a few years for such practices to mature.
 
 ## Conclusion
 
