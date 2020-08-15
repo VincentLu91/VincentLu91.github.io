@@ -70,6 +70,12 @@ Thus, I deployed the app to Docker. The advantage of using a containerized appli
 
 Heroku's free tier infrastructure does not have enough resources to accommodate the IG Content Generator's compute needs. As seen in the heroku logs above, the app's usage far exceeded Heroku's memory quota and the app crashed.
 
+In the development environment, the application can be restarted multiple times to generate Instagram images and captions. In the containerized environment, the application would crash upon a single restart:
+
+![martymcfly](https://user-images.githubusercontent.com/3411100/90304392-3043fc80-de85-11ea-80ee-8df9197f3812.png)
+
+While running the app, the docker logs showed that the application exceeded 10% of the memory available, it is likely that the memory provided by the container may have reached capacity, leading the app to quit.
+
 ## Ideas for Improvement
 
 Until GANs continue to advance and evolve, the capabilities are not fully available to easily generate polished Instagram posts. However, I plan to improve on this project when there is potential to experiment with new GANs that make up for the shortcomings that I have encountered, while accessing hardware to reproduce results from GAN research papers. I also plan to expand the number of use cases by training the generator on different types of content, such as promotional posts and product posts, and content of other formats such as Instagram stories.
