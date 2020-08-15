@@ -74,7 +74,7 @@ In the development environment, the application can be restarted multiple times 
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/90304392-3043fc80-de85-11ea-80ee-8df9197f3812.png)
 
-While running the app, the docker logs showed that the application exceeded 10% of the memory available, it is likely that the memory provided by the container may have reached capacity, leading the app to quit.
+While running the app, the docker logs showed that the application exceeded 10% of the memory available, it is likely that the memory provided by the container may have reached capacity, leading the app to quit. For this reason, I have made the project available for use in development environment as instructed in the repository.
 
 ## Ideas for Improvement
 
