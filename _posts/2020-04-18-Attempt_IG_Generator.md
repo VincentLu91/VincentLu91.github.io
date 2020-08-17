@@ -76,6 +76,8 @@ In the development environment, the application can be restarted multiple times 
 
 While running the app, the docker logs showed that the application exceeded 10% of the memory available, it is likely that the memory provided by the container may have reached capacity, leading the app to quit. For this reason, I have made the project available for use in development environment as instructed in the repository.
 
+If you use the Dockerized application, you may notice that the app generates content as soon as it loads. I had attempted to create a button to offer user control in generating content, however while this worked in development environment, it too suffered from crashing in Docker.
+
 ## Ideas for Improvement
 
 Until GANs continue to advance and evolve, the capabilities are not fully available to easily generate polished Instagram posts. However, I plan to improve on this project when there is potential to experiment with new GANs that make up for the shortcomings that I have encountered, while accessing hardware to reproduce results from GAN research papers. I also plan to expand the number of use cases by training the generator on different types of content, such as promotional posts and product posts, and content of other formats such as Instagram stories.
