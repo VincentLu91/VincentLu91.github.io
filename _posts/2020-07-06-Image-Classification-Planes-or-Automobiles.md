@@ -18,7 +18,7 @@ The second part of the project implementation focuses on the deployment of the d
 
 Normally, training a computer vision model would take hours and would result into larger model file, but because I used a few custom images and that I used a pre-trained model for transfer learning, the size of the saved model is much smaller - at ~85-86MB. The other code files are smaller sizes so the entire codebase was committed to a Github repository.
 
-From this point on, I deployed the data app to production using only Heroku. It was straightforward as the size of the project folder was relatively small. The deployed app is given [here](https://airplanes-or-cars.herokuapp.com). Corresponding repository [here](https://github.com/VincentLu91/airplanes_or_cars).
+From this point on, I deployed the data app to production using only Heroku. It was straightforward as the size of the project folder was relatively small. The deployed Streamlit app is given [here](https://airplanes-or-cars.herokuapp.com). Corresponding repository [here](https://github.com/VincentLu91/airplanes_or_cars).
 
 ![martymcfly](https://user-images.githubusercontent.com/3411100/86633685-f686f880-bf9e-11ea-94d3-45607d88d644.png)
 
