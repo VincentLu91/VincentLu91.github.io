@@ -6,4 +6,4 @@ I'm Vince and I am a data scientist and machine learning developer. I got my sta
 
 My fascination with artificial intelligence may have begun when I was growing up while being exposed to cheesy 90s science fiction with humanoid robots and their monotone voices. Today, we see AI being applied to medical imaging, autonomous vehicles, finances, and other emerging applications.
 
-My goal is to build solutions of tremendous value as we have increasing access to new skills and technologies to do good.
+This blog will be my channel for sharing what I encounter in all things AI and deep tech.
