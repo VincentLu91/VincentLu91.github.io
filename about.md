@@ -10,4 +10,4 @@ While we on their way to reach AGI, my belief is that AI will fundamentally tran
 
 There are two core motivating factors that drive me to pursue artificial intelligence: efficiency and automation. Just as the Internet has brought about increasing speed of access to information, so will AI bring us increasing speed of convenience in our day to day lives. Moreover, my bet is that AI will converge with other exciting technologies to bring about innovative breakthroughs.
 
-My goal is to apply AI to create solutions that will enable efficiency and automation in our day to day lives. There has never been a better time to solve problems that have long been unsolved before.
+My goal is to create AI solutions that will enable efficiency and automation in our day to day lives. There has never been a better time to solve problems that have long been unsolved before.
