@@ -28,9 +28,9 @@ I had also originally considered making the summarizer to be only for posting su
 
 ## Some thoughts for Improvement
 
-As stated in the beginning of the article, there are two categories of summarization: extractive and abstractive. Extractive summarization uses computes weights for words and phrases in each sentence and then ranks them by similarity scores. Often, the words in such summaries are used verbatim.
+As stated in the beginning of the article, there are two categories of summarization: extractive and abstractive. Extractive summarization uses computes weights for words and phrases in each sentence and then ranks them by similarity scores. Often, the words in such summaries are used verbatim. As well, I would like to introduce some text cleaning to the summaries generated to remove non-alphanumeric characters for improved readability.
 
-But in most business use cases, summaries are shortened, paraphrased, and compacted, so usually new words of combinations of phrases are used, and progress is started to head towards that direction. One area of improvement I am considering for applying to the application is using an abstractive summarization model that can produce realistic, relevant summaries that are very close to human-level written summaries.
+In most business use cases, summaries are shortened, paraphrased, and compacted, so usually new words of combinations of phrases are used, and progress is started to head towards that direction. One area of improvement I am considering for applying to the application is using an abstractive summarization model that can produce realistic, relevant summaries that are very close to human-level written summaries.
 
 Google AI has recently released a new model called the [Text-To-Text Transfer Transformer (T5)](https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html). The T5 is a new general purpose model that uses transfer learning to produce state of the art results across domains including machine translation, Q&A (without access to outside text sources), text classification, language modelling, and abstractive text summarization.
 
