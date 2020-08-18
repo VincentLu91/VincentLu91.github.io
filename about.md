@@ -6,4 +6,8 @@ I'm Vince and I am a data scientist and machine learning developer. I got my sta
 
 My fascination with artificial intelligence may have begun when I was growing up while being exposed to cheesy 90s science fiction with humanoid robots and their monotone voices. Today, we see AI being applied to medical imaging, autonomous vehicles, finances, and other emerging applications.
 
-This blog will be my channel for sharing what I encounter in all things AI and deep tech.
+While we on their way to reach AGI, my belief is that AI will fundamentally transform everything we've been conditioned about the world to be true. With continued research in ground-breaking domains including medical imaging, autonomous vehicles, and language translation, AI will increasingly permeate into other domains that will become essential to societies and improve our quality of lives.
+
+There are two core motivating factors that drive me to pursue artificial intelligence: efficiency and automation. Just as the Internet has brought about increasing speed of access to information, so will AI bring us increased speed of convenience in our day to day lives. Moreover, my bet is that AI will converge with other exciting technologies to bring about innovative breakthroughs.
+
+My goal is to apply AI to create solutions that will enable efficiency and automation in our day to day lives. There has never been a better time to solve problems that have long been unsolved before.
